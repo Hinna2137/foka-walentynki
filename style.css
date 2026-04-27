@@ -1,0 +1,160 @@
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Pixelify Sans", sans-serif;
+  background: url(tlo.png);
+  background-size: cover;
+  background-position: center;  
+background-repeat: no-repeat;
+position: relative;
+}
+
+<!--koperta-->
+#koperta-container {
+  width: 100vw;
+  height: 100vh; 
+  text-align: center;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1)}
+  50%   {transform: scale(1.1)}
+  100% {transform: scale(1)}
+}
+
+#koperta {
+  max-width: 400px;
+  animation: pulse 1.5s infinite;
+  cursor: pointer;
+  display: block;
+}
+
+#wiadomosc {
+  margin-top: 20px; 
+  text-align: center;
+}
+
+#list-container {
+  display: none;
+
+  justify-content: center;
+  align-items: center
+}
+
+.list-window{
+  width:90vw;
+  max-width: 800px;
+  aspect-ratio: 3/2;
+  padding: 20px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(window.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px;
+  gap: 1px;
+  padding-top: 180px;
+  transform: none;
+  transform: scale(1.2);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.list-window.open {
+  transform: scale(1);
+  opacity: 1;
+}
+
+h1 {
+  margin-bottom: 10px;
+font-family: "Pixelify Sans", sans-serif;
+  font-weight: 350;
+  font-style: normal;
+  color: #000000;
+}
+
+p {
+  font-size: 40px;
+  color: #000000;
+  text-align: center;
+}
+/*foka*/
+#Foka {
+  width: 50% !important;
+  max-width: 400px !important;
+  height: auto;
+}
+
+<!--przyciski>
+.buttons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 100%; 
+  height: 200px;
+}
+
+.przycimsk {
+  width: 200px;
+  height: 80px;
+  border: none;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  font-size: 0;
+}
+
+#Tak,
+#Tak2 {
+  background-image: url(tak.png);
+}
+#Nie {
+  background-image: url(nie.png);
+}
+
+.przycimsk:hover {
+  transform: translateY(-2px);
+}
+@keyframes pojawienie {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+#Tak2 {
+  animation: pojawienie 0.3s ease;
+}
+
+
+.serduszko {
+  position: absolute;
+  font-size: 24px;
+  color: #ff69b4;
+  animation: lataj 3s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes lataj {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px) rotate(360deg) scale(1.5);
+    opacity: 0;
+  }
+}
